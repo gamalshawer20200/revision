@@ -5,7 +5,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-@Entity()
+@Entity('idea')
 export class IdeaEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
@@ -13,9 +13,9 @@ export class IdeaEntity {
   @CreateDateColumn()
   created: Date;
 
-  @Column()
+  @Column('text')
   idea: string;
 
-  @Column()
-  polpol: string;
+  @Column('text')
+  description: string;
 }
